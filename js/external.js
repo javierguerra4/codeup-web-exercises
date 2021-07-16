@@ -1,3 +1,4 @@
+(function)
 "use strict";
 //alert("Hi, I am A JavaScript alert!");
 
