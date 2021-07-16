@@ -20,13 +20,12 @@
 
 
 //#2
+
 var random = Math.floor(Math.random() * 180) + 20;
 if (random % 2 == 0){
     console.log (random + " is even");
 } else {
-   console.log (random + " is odd");
+    console.log(random + " is odd");
+
 }
-
 // for
-
-
