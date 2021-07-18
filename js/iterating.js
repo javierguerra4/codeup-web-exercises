@@ -54,5 +54,11 @@ for (var i = 0; i < names.length; i += 1 ){
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+var numbers = [1, 2, 3, 4, 5];
+
+for (var i = 0; i <= numbers.length; 1 + 1) {
+    console.log (numbers[i]);
+}
+
 
 })();
