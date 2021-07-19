@@ -8,7 +8,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-var names = ['Loki', 'Thor', 'Hulk', 'Dr.Doom']
+var names = ['Loki', 'Thor', 'Hulk', 'Dr.Doom'];
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
@@ -40,6 +40,11 @@ for (var i = 0; i < names.length; i += 1 ){
     names.forEach(function(input1, input2, input3){
         console.log(input1, input2, input3);
     });
+
+    //instructor solution
+    names.forEach(function(name){
+        console.log(name);
+    });
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -54,11 +59,27 @@ for (var i = 0; i < names.length; i += 1 ){
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-var numbers = [1, 2, 3, 4, 5];
+// var numbers = [1, 2, 3, 4, 5];
+//
+// for (var i = 0; i <= numbers.length; 1 + 1) {
+//     console.log (numbers[i]);
+// }
 
-for (var i = 0; i <= numbers.length; 1 + 1) {
-    console.log (numbers[i]);
-}
+//Instructor solution
+    function first(arr) {
+    return arr[0];
+    }
 
+    function second(arr) {
+        return arr[1];
+    }
+
+    function last(arr) {
+        return arr[arr.length - 1];
+    }
+
+    console.log(first(nums), 1);
+    console.log(second(nums), 2);
+    console.log(last(nums), 5);
 
 })();
