@@ -26,7 +26,8 @@
     var planetsStringBreak = "Mercury <br> Venus <br> Earth <br> Mars <br> Jupiter  <br> Saturn <br> Uranus <br> Neptune";
     console.log(planetsStringBreak)
 
-
+    var planetsStringBreak = planetsArray.join('<br>');
+    var planetsHTML = '<></>'
 
 
 })();
