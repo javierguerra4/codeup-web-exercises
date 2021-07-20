@@ -52,7 +52,17 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
             name: 'George',
             amount: 320}
     ];
-    shoppers.amount
+    shoppers.forEach(function(shopperDiscount)){
+        if (shoppers.amount > 200);
+        return ((shoppers.amount * .12) -
+        console.log(shoppers.name + spent + shoppers.amount)
+    }
+
+// hourlyWeather.forEach(function(hourlyForecast){
+//     console.log("At " + hourlyForecast.time + " the temperture will be " + hourlyForecast.temp + " and feel like " + hourlyForecast.feels_like);
+// });
+
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
