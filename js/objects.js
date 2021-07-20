@@ -42,11 +42,17 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
      */
 
     // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
+    //     {
+    //         name: 'Cameron',
+    //         amount: 180},
+    //     {
+    //         name: 'Ryan',
+    //         amount: 250},
+    //     {
+    //         name: 'George',
+    //         amount: 320}
     // ];
-
+    // for (i=200; i >200 )
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -59,6 +65,61 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = [
+        {
+            title: "Ready Player One",
+            author: {
+                firstName: "Ernest",
+                lastName: "Cline"
+            }
+        },
+        {
+            title: "Into the Wild",
+            author: {
+                firstName: "Jon",
+                lastName: "Krakauer"
+            }
+        },
+        {
+            title: "The Call of the Wild",
+            author: {
+                firstName: "Jack",
+                lastName: "London"
+            }
+        },
+        {
+            title: "The Hobbit",
+            author: {
+                firstName: "John",
+                lastName: "Tolkien"
+            }
+        },
+        {
+            title: "Animal Farm",
+            author:{
+                firstName:"George",
+                lastName: "Orwell"
+            }
+        }
+
+    ]
+    console.log(books[4].title);
+
+
+    // var cars = [
+    //     {
+    //         make: "Toyota",
+    //         model: "Camry",
+    //         features: ["Automatic Windows", "Bluetooth Connectivity", "GPS Navigation"],
+    //         owner: {
+    //             name: "Jane Doe",
+    //             age: 30
+    //         }
+    //         ]
+
+
+
+
 
     /**
      * TODO:
