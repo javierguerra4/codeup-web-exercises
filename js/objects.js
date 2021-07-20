@@ -41,18 +41,18 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {
-    //         name: 'Cameron',
-    //         amount: 180},
-    //     {
-    //         name: 'Ryan',
-    //         amount: 250},
-    //     {
-    //         name: 'George',
-    //         amount: 320}
-    // ];
-    // for (i=200; i >200 )
+    var shoppers = [
+        {
+            name: 'Cameron',
+            amount: 180},
+        {
+            name: 'Ryan',
+            amount: 250},
+        {
+            name: 'George',
+            amount: 320}
+    ];
+    shoppers.amount
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -103,7 +103,9 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
         }
 
     ]
-    console.log(books[4].title);
+        console.log(books[0].title)
+        console.log(books[0].author.firstName)
+        console.log(books[0].author.lastName)
 
 
     // var cars = [
