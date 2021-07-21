@@ -11,12 +11,11 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-var person = [
-    {
+var person = {
         first: "Javier",
         last: "Guerra",
     }
-        ];
+        ;
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -26,7 +25,12 @@ var person = [
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-console.log("Hello from" + " " + person[0].first + " " + person[0].last);
+// console.log("Hello from" + " " + person[0].first + " " + person[0].last);
+    person.sayHello = function() {
+        return "Hello from" + person.firstName + " " + person.lastName;
+    };
+    console.log(person.sayHello());
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -52,14 +56,32 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
             name: 'George',
             amount: 320}
     ];
-    shoppers.forEach(function (shopperDiscount) {
-        if (shopperDiscount.amount > 200) {
-        return ((shopperDiscount.amount * .12) - shopperDiscount);
-            console.log(shopperDiscount.name + "spent" + shopperDiscount.amount );
-    } else  {
-        return ("Not enough for discount");}
-        // console.log(shopperDiscount.name + "spent" + shopperDiscount.amount );
-    });
+    // shoppers.forEach(function (shopperDiscount) {
+    //     if (shopperDiscount.amount > 200) {
+    //     return ((shopperDiscount.amount * .12) - shopperDiscount);
+    //         console.log(shopperDiscount.name + "spent" + shopperDiscount.amount );
+    // } else  {
+    //     return ("Not enough for discount");}
+    //     // console.log(shopperDiscount.name + "spent" + shopperDiscount.amount );
+    // });
+
+    //**INSTRUCTOR EXAMPLE**
+    // function calculateDiscount(amount, threshold, discountPercentage) {
+    //     if (amount <= threshold){
+    //         return 0
+    //     } else {
+    //         return amount * discountPerscentage;
+    //     }
+    //
+    // }
+    // calculateDiscount(180, 200, .12);
+    // calculateDiscount( 250, 200, .12);
+    // calculateDiscount( 320, 200, .12);
+    //
+    // var output1 = 'Cameron is purchasing' + shoppers[0].amount + ' of stuff. He will got ' +
+    //
+    // console.log(output1);
+
 
     // console.log(shoppers.name + "spent" + shoppers.amount );
 // hourlyWeather.forEach(function(hourlyForecast){
@@ -162,7 +184,7 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
      *      ...
      */
     books.forEach(function(bookInfo){
-        console.log("Book title is" + bookInfo.title + "written by" + bookInfo.firstName + bookInfo.lastName);
+        console.log("Book title is " + bookInfo.title + " written by " + bookInfo.author.firstName + " " + bookInfo.author.lastName);
     });
 
 
