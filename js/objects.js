@@ -52,15 +52,19 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
             name: 'George',
             amount: 320}
     ];
-    shoppers.forEach(function(shopperDiscount)){
-        if (shoppers.amount > 200);
-        return ((shoppers.amount * .12) -
-        console.log(shoppers.name + spent + shoppers.amount)
-    }
+    shoppers.forEach(function (shopperDiscount) {
+        if (shopperDiscount.amount > 200) {
+        return ((shopperDiscount.amount * .12) - shopperDiscount);
+            console.log(shopperDiscount.name + "spent" + shopperDiscount.amount );
+    } else  {
+        return ("Not enough for discount");}
+        // console.log(shopperDiscount.name + "spent" + shopperDiscount.amount );
+    });
 
+    // console.log(shoppers.name + "spent" + shoppers.amount );
 // hourlyWeather.forEach(function(hourlyForecast){
 //     console.log("At " + hourlyForecast.time + " the temperture will be " + hourlyForecast.temp + " and feel like " + hourlyForecast.feels_like);
-// });
+// };
 
 
     /** TODO:
@@ -157,7 +161,15 @@ console.log("Hello from" + " " + person[0].first + " " + person[0].last);
      *      ---
      *      ...
      */
+    books.forEach(function(bookInfo){
+        console.log("Book title is" + bookInfo.title + "written by" + bookInfo.firstName + bookInfo.lastName);
+    });
 
+
+
+// hourlyWeather.forEach(function(hourlyForecast){
+//     console.log("At " + hourlyForecast.time + " the temperture will be " + hourlyForecast.temp + " and feel like " + hourlyForecast.feels_like);
+// });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
