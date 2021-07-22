@@ -64,7 +64,31 @@ var person = {
     //     return ("Not enough for discount");}
     //     // console.log(shopperDiscount.name + "spent" + shopperDiscount.amount );
     // });
+    // for (var i = 0; i < shoppers.length; i += 1) {
+    //
+    // }
 
+
+    for (var i = 0; i < shoppers.length; i += 1) {
+        var discountedAmount = calculateDiscount(shoppers[i].amount, discountThreshold, discountPercentage);
+        var output = shoppers[i].name + ' is purchasing ' + shoppers[i].amount +
+            ' of stuff. He will get ' + discountedAmount +
+            ' off the purchase and pay ' +
+            (shoppers[i].amount - discountedAmount) + '.';
+        console.log(output);
+    }
+    
+    //*********************We refactored to a forEach loop by changing 'shoppers' to 'shopper'. We also removed all the [i].
+    shoppers.forEach(function(shopper);
+    for (var i = 0; i < shoppers.length; i += 1) {
+        var discountedAmount = calculateDiscount(shopper.amount, discountThreshold, discountPercentage);
+        var output = shopper.name + ' is purchasing ' + shopper.amount +
+            ' of stuff. He will get ' + discountedAmount +
+            ' off the purchase and pay ' +
+            (shopper.amount - discountedAmount) + '.';
+        console.log(output);
+    }
+    //*********************
     //**INSTRUCTOR EXAMPLE**
     // function calculateDiscount(amount, threshold, discountPercentage) {
     //     if (amount <= threshold){
