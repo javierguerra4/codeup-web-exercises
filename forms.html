@@ -7,16 +7,16 @@
 <body>
 <form method="POST" action="https://request-inspector.glitch.me/">
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="username" placeholder="Enter your Username">
     <label for="password">Password:</label>
-    <input type="text" id="password" name="password">
+    <input type="text" id="password" name="password" placeholder="Enter your Password">
+    <br>
     <br>
     <label for="bio"><strong>Bio</strong></label>
     <br>
     <textarea id="bio" name="bio" rows="6" cols="40"></textarea>
     <br>
-</form>
-<form method="POST" action="https://request-inspector.glitch.me/">
+
     <h3>How did you hear about us?</h3>
     <div>
         <input type="radio" name="a" value="billboard">
@@ -31,6 +31,8 @@
         <br>
         <input type="radio" name="d" value="other">
         <label for="other">Other</label>
+        <br>
+        <br>
     </div>
     <br>
     <div>
@@ -42,6 +44,9 @@
                 <option value="firefox">Mozilla Firefox</option>
                 <option value="internetexp">Microsoft Internet Explorer</option>
             </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit"> <button type="reset" value="Reset">Reset</button>
 
     </div>
 
