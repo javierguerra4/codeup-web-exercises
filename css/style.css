@@ -12,4 +12,6 @@ h2 {
 
 body{
     background-image: url('../img/back image.jpeg');
+    background-repeat: no-repeat;
+    background-size: 1500px 1700px;
 }
