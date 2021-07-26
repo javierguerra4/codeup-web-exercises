@@ -15,3 +15,6 @@ body{
     background-repeat: no-repeat;
     background-size: 1500px 1700px;
 }
+ul {
+    list-style: square;
+}
