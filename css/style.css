@@ -1,7 +1,10 @@
-h1 {
-    color: red;
+.fancy{
+    text-align: center;
+    font-family: "Source Code Pro"
 }
-.fancy {
-    font-family:"Comic Sans MS";
-    color:purple;
+h2 {
+    font-family: Helvetica;
+    text-decoration: underline;
+    color: darkblue;
+    text-decoration-color: black;
 }
