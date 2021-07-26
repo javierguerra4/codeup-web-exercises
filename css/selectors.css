@@ -14,12 +14,12 @@ h1, .fancy-header, #container {
 }
 
 /* selector for all "em" elements */
-selector-todo {
+em {
     font-weight: bold;
 }
 
 /* selector for all elements with class="article" */
-selector-todo {
+.article {
     clear:both;
 }
 
