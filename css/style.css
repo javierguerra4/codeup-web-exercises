@@ -1,3 +1,6 @@
+body{
+    font-family: 'Anton';
+}
 .fancy{
     text-align: center;
     font-family: "Source Code Pro";
@@ -13,7 +16,7 @@ h2 {
 body{
     background-image: url('../img/back image.jpeg');
     background-repeat: no-repeat;
-    background-size: 1500px 1700px;
+    background-size: 1500px 1900px;
 }
 ul {
     list-style: square;
