@@ -16,3 +16,32 @@ body, html {
     display: inline-block;
 }
 
+.message.message-success {
+    font-weight: bold;
+    color: rgb(98,149,112);
+    background-color: rgb(214,242,220);
+    margin: 10px;
+    width: 500px;
+    height: 70px;
+    display: inline-block;
+}
+
+.message.message-warning {
+    font-weight: bold;
+    color: rgb(152,136,65);
+    background-color: rgb(252,251,206);
+    margin: 10px;
+    width: 500px;
+    height: 70px;
+    display: inline-block;
+}
+
+.message.message-error {
+    font-weight: bold;
+    color: rgb(139,64,77);
+    background-color: rgb(244,212,215);
+    margin: 10px;
+    width: 500px;
+    height: 70px;
+    display: inline-block;
+}
