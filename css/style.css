@@ -1,10 +1,13 @@
 body{
     font-family: 'Anton';
+    font-size: 20px;
+    color: darkgoldenrod;
 }
 .fancy{
     text-align: center;
     font-family: "Source Code Pro";
     font-size: 60px;
+    color: #de5d83;
 }
 h2 {
     font-family: Helvetica;
@@ -16,8 +19,21 @@ h2 {
 body{
     background-image: url('../img/back image.jpeg');
     background-repeat: no-repeat;
-    background-size: 1500px 1900px;
+    background-size: 1500px 2070px;
 }
 ul {
     list-style: square;
+}
+.fontsize {
+    font-size: 20px;
+}
+td {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+}
+
+
+img {
+    border-radius: 8px;
 }
