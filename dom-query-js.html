@@ -49,10 +49,30 @@
 
         subHeaderColor.style.color = 'blue'
         // TODO: Uncomment the next line and get all list items
-        // var listItems = ;
 
+        var listItems = document.getElementsByTagName('li');
+
+        for (var i = 0; i < listItems.length; i++) {
+            console.log(listItems[i]);
+        }
         // TODO: Set text color on every other list item to grey
+        (function() {
+        var thirdElement = document.getElementsByTagName('li')[2];
+
+        thirdElement.style.color = 'grey';
+
+
+        var fifthElement = document.getElementsByTagName('li')[4];
+
+         fifthElement.style.color = 'grey';
+         })();
         // TODO: Set text color of li with dbid = 1 to blue
+        (function() {
+            // Get the body element (notice we need to use index 0 of the array!)
+            var listElement = document.getElementsByTagName('li')[0];
+
+            listElement.style.color = 'blue';
+        })();
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraphs = ;
