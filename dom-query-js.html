@@ -31,23 +31,35 @@
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById('main-header');
         console.log(mainHeader);
-// var header = document.getElementById('main-title');
-// console.log(header);
+
+        // instructor solution
+        // Same solution
+
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
         var title = document.getElementById("main-header");
         title.innerHTML = "<em>Javascript is cool!</em>";
+
+        // instructor solution
+        // main.Header.innerHTML
 
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
         console.log(subHeader)
 
+        // instructor solution
+        //Same
         // TODO: Set the text color of subHeader to blue
         var subHeaderColor = document.querySelector('#sub-header');
         console.log(subHeaderColor);
 
         subHeaderColor.style.color = 'blue'
+
+        // instructor solution
+        //
+
+
         // TODO: Uncomment the next line and get all list items
 
         var listItems = document.getElementsByTagName('li');
@@ -55,6 +67,12 @@
         for (var i = 0; i < listItems.length; i++) {
             console.log(listItems[i]);
         }
+
+        // instructor solution
+        // var listItems = document.getElementsByTagName('li');
+        // console.log(listItems)
+
+
         // TODO: Set text color on every other list item to grey
         (function() {
         var thirdElement = document.getElementsByTagName('li')[2];
@@ -66,6 +84,14 @@
 
          fifthElement.style.color = 'grey';
          })();
+
+        // instructor solution
+        for(var i = 0; i < listItems.length; i++) {
+            console.log(listItems[i]);
+
+        }
+
+
         // TODO: Set text color of li with dbid = 1 to blue
         (function() {
             // Get the body element (notice we need to use index 0 of the array!)
@@ -74,9 +100,16 @@
             listElement.style.color = 'blue';
         })();
 
+        // instructor solution
+
+
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
         console.log(subParagraphs);
+
+
+        // instructor solution
 
 
 
@@ -85,6 +118,10 @@
         subParagraphsChange[0].innerHTML = "Mission Accomplished";
 
     })();
+
+    // instructor solution
+
+
 </script>
 </body>
 </html>
