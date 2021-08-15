@@ -13,7 +13,7 @@
 <body>
 <!--This is where we want to type our headers and content.-->
 <main class="container">
-    <h1>First jQuery Exercise practice</h1>
+    <h1 id="header1">First jQuery Exercise practice</h1>
     <br>
 
     <p class="paragraph">
@@ -47,6 +47,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cum magnam
         "use strict";
 
         $('h1').css('color', 'blue');
+
+        var contents = $('#list').html();
+        alert(contents);
 
 
 
