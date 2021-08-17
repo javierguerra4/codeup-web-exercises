@@ -6,38 +6,65 @@
     <link rel="stylesheet" href="css/jquery_faq.css">
 </head>
 <body>
+<main>
 <p>Top 10 FAQ about National Parks:</p>
-
+<span>
 <dl>
     <dt>How do I get there?</dt>
-    <dd class="invinsible">Three of the five entrances to Yellowstone National Park are located in Montana’s Yellowstone Country; they can be accessed through West Yellowstone, Gardiner and Cooke City, MT.</dd>
+    <dd class="invisible">Three of the five entrances to Yellowstone National Park are located in Montana’s Yellowstone Country; they can be accessed through West Yellowstone, Gardiner and Cooke City, MT.</dd>
         <br>
     <dt>Is the park open year-round?</dt>
-    <dd class="invinsible">The park is open all year, but not all of the roads are open to motorized vehicles during the winter, which makes it a magical time to visit.</dd>
+    <dd class="invisible">The park is open all year, but not all of the roads are open to motorized vehicles during the winter, which makes it a magical time to visit.</dd>
          <br>
     <dt>What animals can I expect to see?</dt>
-    <dd class="invinsible">There are 67 species of mammals living in the park, including black bears and grizzly bears.</dd>
+    <dd class="invisible">There are 67 species of mammals living in the park, including black bears and grizzly bears.</dd>
          <br>
     <dt>Can you stay in the park?</dt>
-    <dd class="invinsible">Yes, and we highly recommend it! Immersing yourself in the essence of the park gives a whole different perspective.</dd>
+    <dd class="invisible">Yes, and we highly recommend it! Immersing yourself in the essence of the park gives a whole different perspective.</dd>
         <br>
     <dt>What can I do besides scenic driving?</dt>
-    <dd class="invinsible">Adventurers can hike, fish, bike, horseback ride and boat.</dd>
+    <dd class="invisible">Adventurers can hike, fish, bike, horseback ride and boat.</dd>
         <br>
     <dt>Can I get food, gas and supplies inside the park?</dt>
-    <dd class="invinsible">Gas, snacks and restaurants are all available within the park, but there is not a full-service grocery store. </dd>
+    <dd class="invisible">Gas, snacks and restaurants are all available within the park, but there is not a full-service grocery store. </dd>
         <br>
     <dt>Does the park have cell service and internet connections?</dt>
-    <dd class="invinsible">Cell phone service is limited, but available at Old Faithful, Yellowstone Lake, Canyon, Grant and Mammoth Hot Springs Villages. Wireless internet can be purchased at select locations within these area lodges.</dd>
+    <dd class="invisible">Cell phone service is limited, but available at Old Faithful, Yellowstone Lake, Canyon, Grant and Mammoth Hot Springs Villages. Wireless internet can be purchased at select locations within these area lodges.</dd>
         <br>
     <dt>Can I bring pets?</dt>
-    <dd class="invinsible">Yes, you can bring your pet, and if you are staying in the park, the cabin accommodations allow for this.</dd>
+    <dd class="invisible">Yes, you can bring your pet, and if you are staying in the park, the cabin accommodations allow for this.</dd>
         <br>
     <dt>What kind of clothes should I bring?</dt>
-    <dd class="invinsible">Weather changes rapidly in the Rocky Mountains, so plan to bring a variety of layers.</dd>
+    <dd class="invisible">Weather changes rapidly in the Rocky Mountains, so plan to bring a variety of layers.</dd>
         <br>
     <dt>Do I need special licenses or permits?</dt>
-    <dd class="invinsible">In addition to entrance fees, certain activities do require a permit. Fishing, backcountry hiking and camping, boating, research and commercial photography all need a permit.</dd>
+    <dd class="invisible">In addition to entrance fees, certain activities do require a permit. Fishing, backcountry hiking and camping, boating, research and commercial photography all need a permit.</dd>
 </dl>
+</span>
+    <br>
+    <a href="#" id="reveal-important">Click to reveal answers.</a>
+    </main>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script>
+    "use strict"
+    // $(document).ready(function() {
+    //
+    //
+    //     $("#reveal-important").click(function () {
+    //         $("dd").toggleClass("invisible");
+    //     })
+    // });
+    $(document).ready(function() {
+        $('#reveal-important').click(function(event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+    });
+
+</script>
 </body>
 </html>
