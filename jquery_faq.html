@@ -41,14 +41,44 @@
     <dd class="invisible">In addition to entrance fees, certain activities do require a permit. Fishing, backcountry hiking and camping, boating, research and commercial photography all need a permit.</dd>
 </dl>
 </span>
+
+    <div>
+        <ul>
+            <h3>The Park</h3>
+            <li>Fact</li>
+            <li>Fact</li>
+            <li>Fact</li>
+            <li>Fact</li>
+        </ul>
+        <ul>
+            <h3>The Other Park</h3>
+            <li>Fact</li>
+            <li>Fact</li>
+            <li>Fact</li>
+            <li>Fact</li>
+        </ul>
+
+        <ul>
+            <h3>Yet Other Park</h3>
+            <li>Fact</li>
+            <li>Fact</li>
+            <li>Fact</li>
+            <li>Fact</li>
+        </ul>
+    </div>
     <br>
     <a href="#" id="reveal-important">Click to reveal answers.</a>
-    </main>
+    <br>
+    <br>
+    <button type="button">Click Me To See Yellow!</button>
+
+</main>
 
 <script
         src="https://code.jquery.com/jquery-2.2.4.js"
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 <script>
     "use strict"
     // $(document).ready(function() {
@@ -63,6 +93,17 @@
             event.preventDefault();
             $('dd').toggleClass('invisible');
         });
+
+
+
+        $("ul").each(function() {
+            $('li').last().css('background-color', 'yellow');
+
+        });
+
+
+
+
     });
 
 </script>
