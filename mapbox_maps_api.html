@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite restaurant location</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<h1>My Favorite Restaurant!</h1>
+
+<script src="js/keys.js"></script>
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.351845, 26.292037], // starting position [lng, lat]
+        zoom: 12// starting zoom
+    });
+
+    var maryInfo = {
+        address: "2704 W Mile 5 Rd, Mission, TX 78574",
+        popupHTML: "<p>   Taqueria Mary!<br> Best sincro's in town!</p>"
+    };
+    function placeMarkerAndPopup(info, token, map) {
+    geocode("2704 W Mile 5 Rd, Mission, TX 78574", mapboxToken).then(function(coordinates) {
+        var popup = new mapboxgl.Popup()
+            .setHTML(info.popupHTML);
+        var marker = new mapboxgl.Marker()
+            .setLngLat(coordinates)
+            .addTo(map)
+            .setPopup(popup);
+        popup.addTo(map);
+    });
+    }
+
+    placeMarkerAndPopup(maryInfo, mapboxToken, map);
+</script>
+</body>
+</html>
+<!--98.351845-->
+<!--26.292037-->

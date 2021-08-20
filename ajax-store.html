@@ -53,7 +53,7 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
+<button id="loadData">Reload Data</button>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -104,7 +104,7 @@ function getData() {
         data.forEach(function(tool){
         $("#insertProducts").append("<tr>" +
             "<td>" + tool.title + "</td>" +
-            "<td>" + tool.quantitity + "</td>" +
+            "<td>" + tool.quantity + "</td>" +
             "<td>" + tool.price + "</td>" +
             "<td>" + tool.categories.join(', ') + "</td>" +
             "</tr>");
@@ -112,6 +112,11 @@ function getData() {
     });
 }
     getData();
+
+    $("#loadData").on('click', function(){
+        $("#insertProducts").html('');
+        getData();
+    });
 
 
 

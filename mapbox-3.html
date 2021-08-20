@@ -25,11 +25,11 @@
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
 <!-- Mapbox Geocoder Util Methods -->
-<script src="js/keys.js"></script>
+<script src="mapbox-geocoder-utils.js"></script>
 
 <!-- Custom JS -->
 <script>
-    mapboxgl.accessToken = YOUR_TOKEN_HERE;
+    mapboxgl.accessToken =
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
@@ -38,7 +38,7 @@
     });
 
     // the  geocode method from mapbox-geocoder-utils.js
-    geocode("600 Navarro St #350, San Antonio, TX 78205", YOUR_TOKEN_HERE).then(function(result) {
+    geocode("San Antonio, TX 78205", TOKEN_GOES_HERE ).then(function(result) {
         console.log(result);
         map.setCenter(result);
         map.setZoom(20);
