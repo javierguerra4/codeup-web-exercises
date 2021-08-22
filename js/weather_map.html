@@ -3,20 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
+    <link rel="stylesheet" href="/css/weather_map.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="/js/keys.js"></script>
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<h1> Weather App</h1>
 
+<!--This is the input search box-->
+<div class="input">
+    <input type="text" class="inputValue" placeholder="Enter a city">
+    <input type="submit" value="Submit" class="button">
+</div>
+
+<div id='map' class='container' style='width: 400px; height: 300px;'></div>
+<!--<div class="display">-->
+<!--    <h1 class="name"></h1>-->
+<!--    <p class="desc"></p>-->
+<!--    <p class="temp"></p>-->
+<!--</div>-->
+
+<!--<div class="card" style="width: 18rem;">-->
+<!--&lt;!&ndash;    <img class="card-img-top" src="..." alt="Card image cap">&ndash;&gt;-->
+<!--    <div class="card-body">-->
+<!--        <h5 class="card-date"></h5>-->
+<!--        <hr>-->
+<!--        <p class="card-weather"></p>-->
+<!--        <hr>-->
+<!--        <p class="card-description"></p>-->
+<!--        <hr>-->
+<!--        <p class="card-humidity"></p>-->
+<!--        <hr>-->
+<!--        <p class="card-wind"></p>-->
+<!--        <hr>-->
+<!--        <p class="card-pressure"></p>-->
+<!--    </div>-->
+
+<!--<script>-->
+<!--    var button = document.querySelector('.button');-->
+<!--    var inputValue = document.querySelector('.inputValue');-->
+<!--    var name = document.querySelector('.name');-->
+<!--    var desc = document.querySelector('.desc');-->
+<!--    var temp = document.querySelector('.temp');-->
+
+<!--    button.addEventListener('click', function() {-->
+<!--        fetch($.get)-->
+<!--            .then(response => response.json())-->
+<!--            .then(data => console.log(data))-->
+<!--            .catch(err => alert("Wrong city name"))-->
+<!--    })-->
+
+
+<!-- -->
+<!--</script>-->
 <script>
     "use strict";
-    $.get("http://api.openweathermap.org/data/2.5/weather", {
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: OPEN_WEATHER_APPID,
-        q:     "San Antonio, US"
+            lat:    29.423017,
+            lon:   -98.48527,
+        units: "imperial"
     }).done(function(data) {
         console.log(data);
-        console.log(data.sys.country)
+
     });
+
+    mapboxgl.accessToken = mapboxToken;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: "mapbox://styles/mapbox/dark-v10", // style URL
+        center: [-98.48527, 29.423017], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+    // function displayCard(day,index){
+    //     var html =
+    //         html +=
+    //
+    // }
+</script>
+<script>
+    var button = document.querySelector('.button');
+    var inputValue = document.querySelector('.inputValue');
+    var name = document.querySelector('.name');
+    var desc = document.querySelector('.desc');
+    var temp = document.querySelector('.temp');
+
+    button.addEventListener('click', function() {
+        fetch($.get)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(err => alert("Wrong city name"))
+    })
+
+
+
 </script>
 </body>
 </html>
