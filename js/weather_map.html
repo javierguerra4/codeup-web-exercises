@@ -20,36 +20,36 @@
 <!--</div>-->
 
 <div class="container">
-    <div class="firstCard col-6 " ></div>
+    <div class="firstCard row" ></div>
 </div>
 
-<div class="container">
-    <div class="secondCard"></div>
-</div>
+<!--<div class="container">-->
+<!--    <div class="secondCard"></div>-->
+<!--</div>-->
 
-<div class="container">
-    <div class="thirdCard"></div>
-</div>
+<!--<div class="container">-->
+<!--    <div class="thirdCard"></div>-->
+<!--</div>-->
 
-<div class="container">
-    <div class="fourthCard"></div>
-</div>
+<!--<div class="container">-->
+<!--    <div class="fourthCard"></div>-->
+<!--</div>-->
 
-<div class="container">
-    <div class="fifthCard"></div>
-</div>
+<!--<div class="container">-->
+<!--    <div class="fifthCard"></div>-->
+<!--</div>-->
 
-<div class="container">
-    <div class="sixthCard"></div>
-</div>
+<!--<div class="container">-->
+<!--    <div class="sixthCard"></div>-->
+<!--</div>-->
 
-<div class="container">
-    <div class="seventhCard"></div>
-</div>
+<!--<div class="container">-->
+<!--    <div class="seventhCard"></div>-->
+<!--</div>-->
 
-<div class="container">
-    <div class="eigthCard"></div>
-</div>
+<!--<div class="container">-->
+<!--    <div class="eigthCard"></div>-->
+<!--</div>-->
 
 
 <div id='map' class='container' style='width: 400px; height: 300px;'></div>
@@ -111,9 +111,10 @@
         console.log(data);
 
 
-        data.daily.forEach(function(day) {
-    let unix_timestamp = (day.dt);
-        var date = new Date(unix_timestamp * 1000);
+
+    //     data.daily.forEach(function(day) {
+    // let unix_timestamp = (day.dt);
+    //     var date = new Date(unix_timestamp * 1000);
 // // Hours part from the timestamp
 //             var hours = date.getHours();
 // // Minutes part from the timestamp
@@ -126,18 +127,33 @@
 //
 
 
-                $(".firstCard").append('<p>' + "Today's date" + '</p>', '<div>' + date + '</div>')
+            //     $(".firstCard").append('<p>' + "Today's date" + '</p>', '<div>' + date + '</div>')
+            //
+            // var card1 = (day.temp.day);
+            //     $(".firstCard").append('<p>' + "Temperature:" + '</p>', '<div>' + card1 + '</div>')
+            // var card2 = (day.humidity);
+            //     $(".firstCard").append('<p>' + "Humidity:" + '</p>', '<div>' + card2 + '</div>')
+            // var card3 = (day.wind_gust);
+            //     $(".firstCard").append('<p>' + "Wind:" + '</p>', '<div>' + card3 + '</div>' )
+            // var card4 = (day.pressure);
+            //     $(".firstCard").append('<p>' + "Pressure:" + '</p>', '<div>' + card4 + '</div>')
+var html = '';
+        data.daily.forEach(
+    function cardHtml(day){
+        html += '<div class="card  col-4 p-2">';
+    html += '<p class="card-header p-0">' + new Date(day.dt * 1000) + '</p>';
+    html += '<p class= "card-text">' + day.temp.day + ' ' + day.temp.max + '</p>';
+    html += '<p class= "card-text">' + day.humidity + '</p>';
+    html += '<p class= "card-text">' + day.wind_gust + '</p>';
+    html += '<p class= "card-text">' + day.pressure + '</p>';
+    html += '</div>'
 
-            var card1 = (day.temp.day);
-                $(".firstCard").append('<p>' + "Temperature:" + '</p>', '<div>' + card1 + '</div>')
-            var card2 = (day.humidity);
-                $(".firstCard").append('<p>' + "Humidity:" + '</p>', '<div>' + card2 + '</div>')
-            var card3 = (day.wind_gust);
-                $(".firstCard").append('<p>' + "Wind:" + '</p>', '<div>' + card3 + '</div>' )
-            var card4 = (day.pressure);
-                $(".firstCard").append('<p>' + "Pressure:" + '</p>', '<div>' + card4 + '</div>')
 
-        });
+    });
+        $('.firstCard').html(html)
+
+
+        // });
 
 
 
@@ -149,6 +165,19 @@
         console.log(error);
 
     });
+    // data.daily.forEach(day)
+    // {
+    //     function cardHtml(day) {
+    //         var html = '<div class="card  col-4 p-2">';
+    //         html += '<p class="card-header p-0">' + new Date(day.dt * 1000) + '</p>';
+    //         html += '<p class= "card-text">' + day.temp.day + ' ' + day.temp.max + '</p>';
+    //         html += '<p class= "card-text">' + day.humidity + '</p>';
+    //         html += '<p class= "card-text">' + day.wind_gust + '</p>';
+    //         html += '<p class= "card-text">' + day.pressure + '</p>';
+    //
+    //         $('.firstCard'.html(html))
+    //     }
+    // }
 
 
 
