@@ -10,16 +10,55 @@
 <body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="/js/keys.js"></script>
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <h1> Weather App</h1>
 
 <!--This is the input search box-->
-<div class="input">
-    <input type="text" class="inputValue" placeholder="Enter a city">
-    <input type="submit" value="Submit" class="button">
+<!--<div class="input">-->
+<!--    <input type="text" class="inputValue" placeholder="Enter a city">-->
+<!--    <input type="submit" value="Submit" class="button">-->
+<!--</div>-->
+
+<div class="container">
+    <div class="firstCard col-6 " ></div>
 </div>
 
+<div class="container">
+    <div class="secondCard"></div>
+</div>
+
+<div class="container">
+    <div class="thirdCard"></div>
+</div>
+
+<div class="container">
+    <div class="fourthCard"></div>
+</div>
+
+<div class="container">
+    <div class="fifthCard"></div>
+</div>
+
+<div class="container">
+    <div class="sixthCard"></div>
+</div>
+
+<div class="container">
+    <div class="seventhCard"></div>
+</div>
+
+<div class="container">
+    <div class="eigthCard"></div>
+</div>
+
+
 <div id='map' class='container' style='width: 400px; height: 300px;'></div>
+<div class="display">
+    <div class="dt"></div>
+
+
+
+</div>
 <!--<div class="display">-->
 <!--    <h1 class="name"></h1>-->
 <!--    <p class="desc"></p>-->
@@ -59,18 +98,66 @@
 
 <!-- -->
 <!--</script>-->
+<!--*******This is displaying the 5 day forecast********-->
 <script>
     "use strict";
-    $.get("http://api.openweathermap.org/data/2.5/forecast", {
-        APPID: OPEN_WEATHER_APPID,
-            lat:    29.423017,
-            lon:   -98.48527,
-        units: "imperial"
+    $.get('https://api.openweathermap.org/data/2.5/onecall', {
+        appid: OPEN_WEATHER_APPID,
+        lat: 29.4252,
+        lon: -98.4916,
+        units: 'imperial',
+        exclude: 'minutely,hourly'
     }).done(function(data) {
         console.log(data);
 
+
+        data.daily.forEach(function(day) {
+    let unix_timestamp = (day.dt);
+        var date = new Date(unix_timestamp * 1000);
+// // Hours part from the timestamp
+//             var hours = date.getHours();
+// // Minutes part from the timestamp
+//             var minutes = "0" + date.getMinutes();
+// // Seconds part from the timestamp
+//             var seconds = "0" + date.getSeconds();
+//
+// // Will display time in 10:30:23 format
+//             var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+//
+
+
+                $(".firstCard").append('<p>' + "Today's date" + '</p>', '<div>' + date + '</div>')
+
+            var card1 = (day.temp.day);
+                $(".firstCard").append('<p>' + "Temperature:" + '</p>', '<div>' + card1 + '</div>')
+            var card2 = (day.humidity);
+                $(".firstCard").append('<p>' + "Humidity:" + '</p>', '<div>' + card2 + '</div>')
+            var card3 = (day.wind_gust);
+                $(".firstCard").append('<p>' + "Wind:" + '</p>', '<div>' + card3 + '</div>' )
+            var card4 = (day.pressure);
+                $(".firstCard").append('<p>' + "Pressure:" + '</p>', '<div>' + card4 + '</div>')
+
+        });
+
+
+
+
+
+
+
+    }).fail(function(error) {
+        console.log(error);
+
     });
 
+
+
+
+
+// $(".firstCard").append(card1)
+
+
+    //****************displaying the map*****************
     mapboxgl.accessToken = mapboxToken;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
@@ -84,22 +171,22 @@
     //
     // }
 </script>
-<script>
-    var button = document.querySelector('.button');
-    var inputValue = document.querySelector('.inputValue');
-    var name = document.querySelector('.name');
-    var desc = document.querySelector('.desc');
-    var temp = document.querySelector('.temp');
+<!--<script>-->
+<!--    var button = document.querySelector('.button');-->
+<!--    var inputValue = document.querySelector('.inputValue');-->
+<!--    var name = document.querySelector('.name');-->
+<!--    var desc = document.querySelector('.desc');-->
+<!--    var temp = document.querySelector('.temp');-->
 
-    button.addEventListener('click', function() {
-        fetch($.get)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(err => alert("Wrong city name"))
-    })
+<!--    button.addEventListener('click', function() {-->
+<!--        fetch($.get)-->
+<!--            .then(response => response.json())-->
+<!--            .then(data => console.log(data))-->
+<!--            .catch(err => alert("Wrong city name"))-->
+<!--    })-->
 
 
 
-</script>
+<!--</script>-->
 </body>
 </html>
