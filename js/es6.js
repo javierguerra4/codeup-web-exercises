@@ -35,13 +35,13 @@ const users = [
 // declared as `const`
 const name = 'Javier';
 const email = 'javier.j.guerra4@gmail.com';
-const languages = ['Javascript', 'Java', 'Html5', 'Python', 'CSS'];
+const languages = ['Javascript', 'Java', 'Html5', 'CSS'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
-  name: 'Javier',
-  email: 'javier.j.guerra4@gmail.com',
-  languages: ['Javascript', 'Html5', 'Css']
+   name,
+   email,
+   languages
 });
 
 // const name = 'Javier';
@@ -67,12 +67,17 @@ users.forEach(function(user) {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
-  const name = user.name;
-  const email = user.email;
-  const languages = user.languages;
+  // const name = user.name;
+  // const email = user.email;
+  // const languages = user.languages;
+
+  const {name, email, languages} = user
+
 
   // TODO: rewrite the assignment below to use template strings
-  developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
+  // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
+  developers.push(`${name}, \'s email is, ${email}, ${name}  knows ${languages.join(', ')}`);
+
 });
 
 // TODO: Use `let` for the following variable
