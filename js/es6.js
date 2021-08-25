@@ -33,16 +33,24 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-const name = 'Javier_Guerra';
+const name = 'Javier';
 const email = 'javier.j.guerra4@gmail.com';
 const languages = ['Javascript', 'Java', 'Html5', 'Python', 'CSS'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
-  name: name,
-  email: email,
-  languages: languages
+  name: 'Javier',
+  email: 'javier.j.guerra4@gmail.com',
+  languages: ['Javascript', 'Html5', 'Css']
 });
+
+// const name = 'Javier';
+// const person = {
+//   name,
+//   email: 'javier.j.guerra4@gmail.com',
+//   languages: ['Javascript', 'Java', 'Html5', 'Python', 'CSS']
+// }
+
 
 // TODO: replace `var` with `let` in the following variable declarations
 var emails = [];
