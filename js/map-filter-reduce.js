@@ -39,8 +39,17 @@ const users = [
 ];
 
 
-const atLeastThree = users.filter(function (n) {
-    return n.languages.length >= 3;
-});
+//Problem 1
+// const atLeastThree = users.filter(function (n) {
+//     return n.languages.length >= 3;
+// });
+
+const atLeastThree = users.filter(n => n.languages.length >= 3 );
+
+
+
+//Problem 2 Use .map to create an array of strings where each element is a user's email address
+
+const userEmails = users.map( n => n.email);
 
 
