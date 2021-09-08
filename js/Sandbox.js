@@ -1,4 +1,2 @@
-setTimeout(wakeUpUser, 5000);
-function wakeUpUser() {
-    alert("Are you going to stare at this boring page forever?");
-}
+let numbers = [1, 2, 3, 4, 5];
+numbers.map(n => n * 3)
