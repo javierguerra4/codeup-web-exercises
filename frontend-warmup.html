@@ -10,6 +10,9 @@
 <button type="button" id="hide-btn">
     Hide Paragraph
 </button>
+<button type="button" id="show-btn">
+    Show Paragraph
+</button>
 
 <p>
     Geckos are a group of usually small, usually nocturnal lizards.
@@ -25,7 +28,13 @@
         $("#hide-btn").click(function(){
             $("p").hide();
         });
+        $("#show-btn").click(function(){
+            $("p").show();
+        });
     });
+
+//    Source
+//     https://stackoverflow.com/questions/29611045/hide-paragraph-element-in-jquery
 </script>
 </body>
 </html>
