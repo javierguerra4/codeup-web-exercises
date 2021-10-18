@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend-Warmup</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<button type="button" id="hide-btn">
+    Hide Paragraph
+</button>
+
+<p>
+    Geckos are a group of usually small, usually nocturnal lizards.
+    They are found on every continent except Australia.
+</p>
+
+<script>
+    'use strict';
+    // document.querySelector('#hide-btn').addEventListener('click', function(e) {
+    //
+    // } )
+    $(document).ready(function(){
+        $("#hide-btn").click(function(){
+            $("p").hide();
+        });
+    });
+</script>
+</body>
+</html>
+
+<!--In `codeup-web-exercises`, create a new HTML file called, `frontend-warmup.html` and add the following:-->
+<!-- - a button element with an id of `hide-btn` and inner text that says-->
+<!--“Hide Paragraph.”-->
+<!-- - a paragraph with and id of `paragraph` and the inner text, ‘This paragraph will disappear when the button is clicked.’-->
+<!--Add script tags with JavaScript that will hide the paragraph when the hide button is clicked.-->
+<!--REMINDERS:-->
+<!-- - document.querySelector() selects elements just like jQuery-->
+<!-- - <DOM_NODE_HERE>.addEventListener(EVENT_TYPE, FUNCTION_HERE) is used for adding events-->
+<!--    - <DOM_NODE_HERE>.style can alter the styling of a DOM selected element-->
+<!--        - setting display to none on the paragraph will ‘hide’ it-->
+<!--        BONUS: add a functional show button-->
+<!--        Add, commit and push when finished-->
